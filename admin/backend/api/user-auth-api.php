@@ -9,14 +9,14 @@ $log_entry = date('Y-m-d H:i:s') . " - " . $_SERVER['REMOTE_ADDR'] . " - " . $_S
 file_put_contents($log_file, $log_entry, FILE_APPEND);
 
 include_once '../controller/config.php';
-include_once '../controller/user-crud.php';
+require_once '../controller/user-crud.php';
+use App\Auth\UserAuth;
 include_once '../mail/mailer.php';
 
-$user = new userAuth();
+$user = new UserAuth($crud);
 
 if (isset($_GET['action']) && $_GET['action'] == 'register') {
-    $getdata = json_decode(file_get_contents("php://input"), true);
-
+    $getdata = json_decode(file_get_contents("php:
     $data = array(
         'username' => $getdata['name'],
         'email' => $getdata['email'],
@@ -32,8 +32,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'register') {
 }
 
 if (isset($_GET['action']) && $_GET['action'] == 'login') {
-    $getdata = json_decode(file_get_contents("php://input"), true);
-
+    $getdata = json_decode(file_get_contents("php:
     $required_fields = array('name', 'password');
     $missing_fields = array();
 
@@ -66,8 +65,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'login') {
 }
 
 if (isset($_GET['action']) && $_GET['action'] == 'forgotpass') {
-    $getdata = json_decode(file_get_contents("php://input"), true);
-
+    $getdata = json_decode(file_get_contents("php:
     $required_fields = array('email');
     $missing_fields = array();
 
@@ -123,8 +121,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'forgotpass') {
 }
 
 if (isset($_GET['action']) && $_GET['action'] == 'check_token') {
-    $getdata = json_decode(file_get_contents("php://input"), true);
-
+    $getdata = json_decode(file_get_contents("php:
     $required_fields = array('token');
     $missing_fields = array();
 
@@ -144,16 +141,10 @@ if (isset($_GET['action']) && $_GET['action'] == 'check_token') {
         exit;
     }
 
-    $token = $getdata['token'];
-
-    // Check if the token exists and hasn't expired
-    $resetRecord = $crud->select('password_resets', 'user_id, expires_at', null, "`token`=?", array($token));
+    $token = $getdata['token'];    $resetRecord = $crud->select('password_resets', 'user_id, expires_at', null, "`token`=?", array($token));
 
     if (is_array($resetRecord)) {
-        $expires_at = $resetRecord['expires_at'];
-
-        // Check if the token is expired
-        if (strtotime($expires_at) < time()) {
+        $expires_at = $resetRecord['expires_at'];        if (strtotime($expires_at) < time()) {
             echo json_encode(array('status' => false, 'message' => 'Token has expired'), JSON_PRETTY_PRINT || JSON_UNESCAPED_UNICODE);
             exit;
         }
@@ -167,8 +158,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'check_token') {
 }
 
 if (isset($_GET['action']) && $_GET['action'] == 'resetpass') {
-    $getdata = json_decode(file_get_contents("php://input"), true);
-
+    $getdata = json_decode(file_get_contents("php:
     $required_fields = array('token', 'password');
     $missing_fields = array();
 
@@ -189,24 +179,13 @@ if (isset($_GET['action']) && $_GET['action'] == 'resetpass') {
     }
 
     $token = $getdata['token'];
-    $new_password = $getdata['password'];
-
-    // Check if the token exists and hasn't expired
-    $resetRecord = $crud->select('password_resets', 'user_id, expires_at', null, "`token`=?", array($token));
+    $new_password = $getdata['password'];    $resetRecord = $crud->select('password_resets', 'user_id, expires_at', null, "`token`=?", array($token));
 
     if (is_array($resetRecord)) {
 
-        $user_id = $resetRecord['user_id'];
+        $user_id = $resetRecord['user_id'];        $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);        $updatePassword = $crud->update('users', array('password' => $hashed_password), "`user_id`=$user_id");
 
-        // Hash the new password
-        $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
-
-        // Update the user's password in the database
-        $updatePassword = $crud->update('users', array('password' => $hashed_password), "`user_id`=$user_id");
-
-        if (is_bool($updatePassword)) {
-            // Delete the reset token after successful password update
-            $crud->delete('password_resets', "`user_id`=?", array($user_id));
+        if (is_bool($updatePassword)) {            $crud->delete('password_resets', "`user_id`=?", array($user_id));
 
             echo json_encode(array('status' => true, 'message' => 'Password updated successfully'), JSON_PRETTY_PRINT || JSON_UNESCAPED_UNICODE);
             exit;
@@ -221,8 +200,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'resetpass') {
 }
 
 if (isset($_GET['action']) && $_GET['action'] == 'NewPass') {
-    $data = json_decode(file_get_contents("php://input"), true);
-    $token = $data['token'] ?? '';
+    $data = json_decode(file_get_contents("php:    $token = $data['token'] ?? '';
     $new_password = $data['new_password'] ?? '';
 
     if (empty($token) || empty($new_password)) {
@@ -251,8 +229,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'NewPass') {
 }
 
 if (isset($_GET['action']) && $_GET['action'] == 'verifyLink') {
-    $data = json_decode(file_get_contents("php://input"), true);
-    $email = $data['email'] ?? '';
+    $data = json_decode(file_get_contents("php:    $email = $data['email'] ?? '';
 
     if (empty($email)) {
         echo json_encode(['status' => false, 'message' => 'Email is required']);
@@ -288,8 +265,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'verifyLink') {
 }
 
 if (isset($_GET['action']) && $_GET['action'] == 'deleteuser') {
-    $data = json_decode(file_get_contents("php://input"), true);
-
+    $data = json_decode(file_get_contents("php:
     if (isset($data['user_id'])) {
         $user_id = $data['user_id'];
         $deleteUser = $crud->delete('users', "`user_id`=?", array($user_id));

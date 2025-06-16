@@ -9,39 +9,28 @@ $log_entry = date('Y-m-d H:i:s') . " - " . $_SERVER['REMOTE_ADDR'] . " - " . $_S
 file_put_contents($log_file, $log_entry, FILE_APPEND);
 
 include_once '../controller/config.php';
-include_once '../controller/user-crud.php';
+require_once '../controller/user-crud.php';
+use App\Auth\UserAuth;
 include_once '../mail/mailer.php';
 
-$user = new userAuth();
+$user = new UserAuth($crud);
 
 if (isset($_GET['action']) && $_GET['action'] == 'register') {
-    $getdata = json_decode(file_get_contents("php://input"), true);
-
+    $getdata = json_decode(file_get_contents("php:
     $data = array(
         'username' => $getdata['name'],
         'email' => $getdata['email'],
         'password' => $getdata['password'],
-        'is_verified' => 1 // Set the user as verified immediately
-    );
+        'is_verified' => 1    );
 
     $registerUser = $user->userRegister($data);
-    if (is_bool($registerUser) && $registerUser === true) {
-        // Log the successful registration
-        error_log("User registered successfully: " . $data['username']);
-        
-        // Automatically log in the user after registration
-        $loginData = array(
+    if (is_bool($registerUser) && $registerUser === true) {        error_log("User registered successfully: " . $data['username']);        $loginData = array(
             'username' => $data['username'],
             'password' => $data['password']
         );
         $loginUser = $user->userLogin($loginData, true, true);
         
-        if (is_array($loginUser)) {
-            // Generate a token for the newly registered user
-            $token = bin2hex(random_bytes(16)); // Generate a random token
-            
-            // Update the user record with the new token
-            $updateData = ['remember_token' => $token];
+        if (is_array($loginUser)) {            $token = bin2hex(random_bytes(16));            $updateData = ['remember_token' => $token];
             $updateUser = $crud->update('users', $updateData, "`user_id`= ?", array($loginUser['user_id']));
             
             if ($updateUser) {
@@ -52,8 +41,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'register') {
                         'user_id' => $loginUser['user_id'],
                         'username' => $loginUser['username'] ?? $data['username'],
                         'email' => $loginUser['email'] ?? $data['email'],
-                        'token' => $token // Include the token in the response
-                    )
+                        'token' => $token                    )
                 );
                 echo json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
             } else {
@@ -62,9 +50,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'register') {
         } else {
             echo json_encode(array('status' => false, 'message' => 'Sign Up Successful but Login Failed'), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
         }
-    } else {
-        // Log the registration failure
-        $errorMessage = is_string($registerUser) ? $registerUser : "Unknown error occurred during registration";
+    } else {        $errorMessage = is_string($registerUser) ? $registerUser : "Unknown error occurred during registration";
         error_log("User registration failed: " . $errorMessage);
         echo json_encode(array('status' => false, 'message' => $errorMessage), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     }
@@ -72,8 +58,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'register') {
 
 
 if (isset($_GET['action']) && $_GET['action'] == 'login') {
-    $getdata = json_decode(file_get_contents("php://input"), true);
-
+    $getdata = json_decode(file_get_contents("php:
     $required_fields = array('name', 'password');
     $missing_fields = array();
 
@@ -106,8 +91,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'login') {
 }
 
 if (isset($_GET['action']) && $_GET['action'] == 'forgotpass') {
-    $getdata = json_decode(file_get_contents("php://input"), true);
-
+    $getdata = json_decode(file_get_contents("php:
     $required_fields = array('email');
     $missing_fields = array();
 
@@ -164,14 +148,10 @@ if (isset($_GET['action']) && $_GET['action'] == 'forgotpass') {
 }
 
 if (isset($_GET['action']) && $_GET['action'] == 'NewPass') {
-    $data = json_decode(file_get_contents("php://input"), true);
-    $username = $data['username'] ?? '';
+    $data = json_decode(file_get_contents("php:    $username = $data['username'] ?? '';
     $email = $data['email'] ?? '';
     $old_password = $data['old_password'] ?? '';
-    $new_password = $data['new_password'] ?? '';
-
-    // Validate required fields
-    $missing_fields = [];
+    $new_password = $data['new_password'] ?? '';    $missing_fields = [];
     if (empty($username)) $missing_fields[] = 'username';
     if (empty($email)) $missing_fields[] = 'email';
     if (empty($old_password)) $missing_fields[] = 'old_password';
@@ -180,27 +160,15 @@ if (isset($_GET['action']) && $_GET['action'] == 'NewPass') {
     if (!empty($missing_fields)) {
         echo json_encode(['status' => false, 'message' => 'Missing required fields', 'fields' => $missing_fields]);
         exit;
-    }
-
-    // Get the user from the database
-    $userData = $crud->select('users', '*', null, "`username`=? AND `email`=?", array($username, $email));
+    }    $userData = $crud->select('users', '*', null, "`username`=? AND `email`=?", array($username, $email));
 
     if (!is_array($userData)) {
         echo json_encode(['status' => false, 'message' => 'User not found']);
         exit;
-    }
-
-    // Verify old password
-    if (!password_verify($old_password, $userData['password'])) {
+    }    if (!password_verify($old_password, $userData['password'])) {
         echo json_encode(['status' => false, 'message' => 'Old password is incorrect']);
         exit;
-    }
-
-    // Hash the new password
-    $hashed_new_password = password_hash($new_password, PASSWORD_DEFAULT);
-
-    // Update the password in the database
-    $updateData = ['password' => $hashed_new_password];
+    }    $hashed_new_password = password_hash($new_password, PASSWORD_DEFAULT);    $updateData = ['password' => $hashed_new_password];
     $updateUser = $crud->update('users', $updateData, "`user_id`= ?", array($userData['user_id']));
 
     if ($updateUser) {
@@ -212,8 +180,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'NewPass') {
 
 
 if (isset($_GET['action']) && $_GET['action'] == 'verifyLink') {
-    $data = json_decode(file_get_contents("php://input"), true);
-    $email = $data['email'] ?? '';
+    $data = json_decode(file_get_contents("php:    $email = $data['email'] ?? '';
 
     if (empty($email)) {
         echo json_encode(['status' => false, 'message' => 'Email is required']);
@@ -249,8 +216,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'verifyLink') {
 }
 
 if (isset($_GET['action']) && $_GET['action'] == 'deleteuser') {
-    $data = json_decode(file_get_contents("php://input"), true);
-
+    $data = json_decode(file_get_contents("php:
     if (isset($data['user_id'])) {
         $user_id = $data['user_id'];
         $deleteUser = $crud->delete('users', "`user_id`=?", array($user_id));

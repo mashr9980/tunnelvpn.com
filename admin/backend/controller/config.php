@@ -12,7 +12,6 @@ define('DB_USER', $_ENV['DB_USER']);
 define('DB_PASS', $_ENV['DB_PASS']);
 define('DB_NAME', $_ENV['DB_NAME']);
 
-//mail config
 define('MAIL_HOST', $_ENV['MAIL_HOST']);
 define('MAIL_USER', $_ENV['MAIL_USER']);
 define('MAIL_PASS', $_ENV['MAIL_PASS']);
@@ -22,11 +21,10 @@ define('MAIL_SMTP_SECURE', $_ENV['MAIL_SMTP_SECURE']);
 
 define('MAIL_SUPPORT', $_ENV['MAIL_SUPPORT']);
 
-// Include the Prepare_crud class file
-require_once 'prepare-crud.php';
+require_once $rootPath . '/src/Database/Database.php';
+use App\Database\Database;
 
-// Instantiate the Prepare_crud class
-$crud = new Prepare_crud(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+$crud = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
