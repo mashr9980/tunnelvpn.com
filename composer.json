@@ -1,6 +1,6 @@
 {
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.1",
         "azimolabs/apple-sign-in-php-sdk": "^2.2",
         "firebase/php-jwt": "^6.0",
         "google/apiclient": "^2.14",

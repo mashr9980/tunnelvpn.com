@@ -1,7 +1,8 @@
 <?php
 
 include_once '../controller/config.php';
-include_once '../controller/user-crud.php';
+require_once '../controller/user-crud.php';
+use App\Auth\UserAuth;
 include_once '../mail/mailer.php';
 
 

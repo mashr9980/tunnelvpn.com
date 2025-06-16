@@ -1,8 +1,9 @@
 <?php
 session_start();
 include_once '../controller/config.php';
-include_once '../controller/user-crud.php';
-$user = new userAuth();
+require_once '../controller/user-crud.php';
+use App\Auth\UserAuth;
+$user = new UserAuth($crud);
 if (isset($_POST['createuser'])) {
     $data = $_POST;
     unset($data['createuser']);
@@ -28,7 +29,7 @@ if (isset($_POST['loginuser'])) {
         $_SESSION['login_id'] = $loginuser;
 
         $redirectUrl = isset($_SESSION['redirect_url']) ? $_SESSION['redirect_url'] : 'index.php';
-        unset($_SESSION['redirect_url']); // Clear the redirect URL from the session
+        unset($_SESSION['redirect_url']);
 
         $plan = isset($_SESSION['plan']) ? $_SESSION['plan'] : '';
         unset($_SESSION['plan']);

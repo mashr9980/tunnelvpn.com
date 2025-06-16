@@ -2,7 +2,9 @@
 session_start();
 
 include_once '../controller/config.php';
-include_once '../controller/prepare-crud.php';
+require_once $rootPath . '/src/Database/Database.php';
+use App\Database\Database;
+$crud = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 if (isset($_POST['createsubserver'])) {
     $data = $_POST;
