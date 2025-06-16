@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.main-container {
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* .card{
+    max-width: 400px;
+} */
+
+.card-body {
+    /* background-color: #1E1E1E; */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    color: #464545 !important;
+}
+
+.header {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #3A3A3A;
+    border-radius: 4px;
+    /* background-color: #2C2C2C; */
+    /* color: #E0E0E0; */
+}
+
+.form-group input:focus {
+    border-color: #5fee42;
+    outline: none;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background: #5fee42;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+    background-color: #2C2C2C;
+    color: #ffff;
+}
+
+.btn-secondary {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #2C2C2C;
+    color: #E0E0E0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #3A3A3A;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    color: #A0A0A0;
+}
+
+.footer a {
+    color: #5fee42;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.forget {
+    margin-top: 10px;
+}
+
+.forget a {
+    color: white;
+    text-decoration: none;
+}
+
+.secure-checkout-container .secure-checkout-icon svg {
+    align-items: center;
+    background-color: #009688;
+    border-radius: 2rem;
+    display: flex;
+    /* height: 2rem; */
+    margin: 0.1rem 0;
+    /* width: 2rem */
+}
+
+
+.secure-checkout-container {
+    /* background-color: #fff; */
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 20px 0;
+    color: #000;
+}
+
+@media (min-width: 768px) {
+    .secure-checkout-container {
+        align-items: center;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .secure-checkout-container {
+        padding: 0 20px;
+    }
+}
+
+
+.secure-checkout-container .secure-checkout-icon svg path {
+    fill: #fff
+}
+
+.secure-checkout-container .secure-checkout-text-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* font-size: 30px; */
+    margin-inline-start: 10px;
+    color: #000;
+}
+
+@media (min-width: 768px) {
+    .secure-checkout-container .secure-checkout-text-wrapper {
+        font-size: 15px;
+    }
+}
+
+.secure-checkout-container .secure-checkout-title {
+    font-weight: 700;
+    width: 100%
+}
+
+@media (min-width: 992px) {
+    .secure-checkout-container .secure-checkout-title {
+        width: auto
+    }
+}
+
+.secure-checkout-container .secure-checkout-title::after {
+    content: '|';
+    display: none;
+    font-weight: initial
+}
+
+@media (min-width: 768px) {
+    .secure-checkout-container .secure-checkout-title::after {
+        display: inline;
+        margin: 0 10px;
+    }
+}
+
+.bg-light-grey {
+    --bg-opacity: 1;
+    background-color: #f7f7f8;
+    background-color: rgba(247, 247, 248, var(--bg-opacity));
+}
+
+.header.pay-header {
+    position: unset;
+}
+
+.header--fixed {
+    position: fixed !important;
+}
+
+.summary-head {
+    border-bottom: 2px solid #dee2e6;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.summary-head h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #2C2C2C;
+}
+
+.summary-body p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #3A3A3A;
+}
+
+.summary-body hr {
+    border-top: 1px solid #dee2e6;
+}
+
+.summary-footer {
+    margin-top: 15px;
+    padding-top: 10px;
+}
+
+.summary-footer p {
+    font-size: 1.1em;
+    color: #2C2C2C !important;
+    margin: 0;
+}
+
+.b-top {
+    border-top: #A0A0A0 2px solid;
+}
+
+.pass-icon {
+    color: #E0E0E0;
+    position: absolute;
+    z-index: 999;
+    top: 4px;
+    right: 11px;
+}

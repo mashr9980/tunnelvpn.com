@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Block: Preloader
+   Dependencies: no dependencies
+   ========================================================================== */
+
+.preloader{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: @color__primary--dark;
+	z-index: 9999;
+	display: none;
+	-webkit-perspective: 1000px;
+
+	.js-preload-me &{
+		display: block;
+	}
+
+	&__circle{
+		position: absolute;
+		border: 2px dotted fade(@color__primary, 70%);
+		border-radius: 50%;
+		.animation(preloader 3s linear infinite);
+
+		&:after, &:before{
+			position: absolute;
+			content: '';
+			display: block;
+			border-right: 1px dotted fade(@color__primary, 70%);
+			width: 1px;
+			height: 9%;
+			left: 50%;
+		}
+
+		&:after{ top: 0; }
+		&:before{ bottom: 0; top: auto; }
+
+		&--primary{
+			.square(150px);
+			.center(150px);
+		}
+
+		&--secondary{
+			.square(99px);
+			.center(99px);
+			.animation(preloader 3s -2s linear infinite);
+		}
+
+		&--tertiary{
+			.square(50px);
+			.center(50px);
+			.animation(preloader 3s -4s linear infinite);
+		}
+	}
+}
+
+.keyframes(preloader, {
+	0%{
+		.transform(rotateX(0deg) rotateZ(0));
+	}
+
+	100%{
+		.transform(rotateX(360deg) rotateZ(360deg));
+	}
+});

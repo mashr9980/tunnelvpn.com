@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Block: Instagram Widget
+   Dependencies: Fontello.less
+   ========================================================================== */
+
+.instagram-widget{
+	.clear();
+
+	&__item{
+		float: left;
+		width: 10%;
+		position: relative;
+		opacity: 0.25;
+		.transition-custom(opacity .3s ease, filter .3s ease);
+
+		&--icon{
+			opacity: 1;
+			background: #f7f7f7;
+		}
+
+		&:hover{
+			opacity: 1;
+
+			& .instagram-widget__image{
+				-webkit-filter: grayscale(0);
+				filter: grayscale(0);
+			}
+		}
+	}
+
+	&__link{
+		display: block;
+
+		&--icon{
+			padding-top: 100%;
+		}
+	}
+
+	&__icon{
+		text-align: center;
+		color: black;
+		opacity: 0.5;
+		font-size: 40px;
+		display: block;
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		margin-top: -20px;
+	}
+
+	&__image{
+		display: block;
+		-webkit-filter: grayscale(1);
+		filter: grayscale(1);
+	}
+
+}
+
+.media-mixin(@break) when (@break = @break-medium) {
+	.instagram-widget{
+		&__item{
+			width: 20%;
+		}
+	}
+}

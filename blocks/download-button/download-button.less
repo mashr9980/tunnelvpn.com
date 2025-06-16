@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Block: Download Button
+   Dependencies: no dependencies
+   ========================================================================== */
+
+.download-button{
+	background-color: white;
+	position: relative;
+	padding: 20px 20px 20px 80px;
+	display: block;
+	max-width: 275px;
+	margin: 0 auto 0 auto;
+	-webkit-box-shadow: 0px 2px 8px 0px rgba(221,221,221,0.75);
+	box-shadow: 0px 2px 8px 0px rgba(221,221,221,0.75);
+
+	&__icon{
+		height: 40px;
+		position: absolute;
+		left: 25px;
+		top: 18px;
+
+	}
+
+	&__platform{
+		display: block;
+		color: @color__text--light;
+		text-transform: uppercase;
+		letter-spacing: 0.005em;
+		margin-bottom: 10px;
+	}
+
+	&__store{
+		display: block;
+		color: @color__text;
+		letter-spacing: 0.005em;
+		font-size: 22px;
+	}
+}
+
+.media-mixin(@break) when (@break = @break-medium) {
+	.download-button{
+		margin-bottom: 15px;
+	}
+}

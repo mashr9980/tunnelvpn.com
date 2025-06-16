@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Block: Member
+   Dependencies: Fontello.less
+   ========================================================================== */
+
+.member{
+	text-align: center;
+
+	&__photo-wrapper{
+		position: relative;
+		margin-bottom: 25px;
+	}
+
+	&__cover{
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: fade(@color__primary, 90%);
+		opacity: 0;
+		cursor: default;
+		.transition(opacity);
+
+		.member__photo-wrapper:hover &{
+			opacity: 1;
+		}
+	}
+
+	&__socials{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__social{
+		display: inline-block;
+		width: 45px;
+		height: 45px;
+		line-height: 45px;
+		margin: 0 10px;
+		-webkit-box-shadow: 0px 1px 4px 0px rgba(221,221,221,0.75);
+		box-shadow: 0px 1px 4px 0px rgba(221,221,221,0.75);
+		.transition(box-shadow);
+
+		&:hover{
+			-webkit-box-shadow: 0px 1px 10px 0px rgba(221,221,221,0.75);
+			box-shadow: 0px 1px 10px 0px rgba(221,221,221,0.75);
+		}
+	}
+
+	&__link{
+		display: block;
+	}
+
+	&__name{
+		font-size: 20px;
+		font-weight: @font__bold;
+		margin: 0;
+		letter-spacing: -0.01em;
+	}
+
+	&__position{
+		font-size: 16px;
+		font-family: @font__secondary;
+	}
+
+	&__quote{
+		color: white;
+		border: 0;
+		padding: 90px 25px 0 25px;
+		font-style: normal;
+		font-family: @font__secondary;
+		font-size: 14px;
+		line-height: 22px;
+		letter-spacing: 0.01em;
+
+		&:before{
+			content: open-quote;
+			position: absolute;
+			opacity: 0;
+		}
+
+		&:after{
+			content: close-quote;
+			position: absolute;
+			font-family: @font__primary;
+			font-size: 55px;
+			position: absolute;
+			top: 80px;
+			left: 50%;
+			margin-left: -11px;
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-large-x) {
+	.member{
+		margin-bottom: 60px;
+	}
+}

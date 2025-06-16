@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Block: Hero
+   Dependencies: no dependencies
+   ========================================================================== */
+
+.hero{
+	padding-top: 150px;
+	background-image: url("@{img__common--background}hero.jpg");
+	background-size: cover;
+	background-position: center center;
+
+	&--skin-1{
+		background-image: url("@{img__common--background}hero-2.jpg");
+		padding: 150px 0;
+	}
+
+	&--skin-2{
+		background-image: url("@{img__common--background}hero-3.jpg");
+		padding: 150px 0;
+		min-height: 740px;
+	}
+
+	&--center{
+		text-align: center;
+	}
+}
+
+.media-mixin(@break) when (@break = @break-large-x) {
+	.hero{
+		min-height: auto;
+		padding-top: 100px;
+
+		&--skin-2{
+			padding-bottom: 200px;
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-medium) {
+	.hero{
+		&--skin-1{
+			text-align: center;
+		}
+
+		&--skin-2{
+			padding-bottom: 150px;
+		}
+	}
+}

@@ -1,0 +1,595 @@
+2024-10-07 12:17:36 - [INFO] - NewPass API accessed from IP: 58.65.163.185
+2024-10-07 12:17:36 - [INFO] - Including configuration and CRUD files
+2024-10-07 12:17:36 - [INFO] - Initializing CRUD object
+2024-10-07 12:17:36 - [INFO] - Decoding JSON input
+2024-10-07 12:17:36 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [old_password] => 123456789
+    [new_password] => 987654321
+)
+
+2024-10-07 12:17:36 - [INFO] - Input validation passed
+2024-10-07 12:17:36 - [INFO] - Fetching user data for username: aashir and email: aashir04m@gmail.com
+2024-10-07 12:17:36 - [INFO] - User found: Array
+(
+    [user_id] => 139
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [password] => $2y$10$9I3a7UbHvBVu1Kpsk48RG.ALxJeOJ6r3cc4/m35a5uqKg9Thd5ZaW
+    [registration_date] => 2024-10-06 19:12:35
+    [last_login] => 2024-10-07 11:54:06
+    [is_verified] => 1
+    [verification_token] => 5325d282bc837c2f12fe36b9e503f586
+    [remember_token] => 52dfa02db3a8
+    [google_id] => 
+    [apple_id] => 
+    [auth_provider] => local
+    [total_data_usage] => 0.00
+)
+
+2024-10-07 12:17:36 - [INFO] - Old password verified successfully
+2024-10-07 12:17:36 - [INFO] - Updating password for user ID: 139
+2024-10-07 12:17:36 - [INFO] - Update data: Array
+(
+    [password] => $2y$10$f/Sy.wxI9F3SCFIlqxj7fuhyjgiRbZvVdekP9PvqIswczIsTjZ8b2
+)
+
+2024-10-07 12:17:36 - [INFO] - User ID for update: 139
+[07-Oct-2024 12:17:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /home/djfr02j5c9ea/public_html/account.tunnelvpn.com/backend/controller/prepare-crud.php:187
+Stack trace:
+#0 /home/djfr02j5c9ea/public_html/account.tunnelvpn.com/backend/controller/prepare-crud.php(187): mysqli_stmt->bind_param()
+#1 /home/djfr02j5c9ea/public_html/account.tunnelvpn.com/backend/controller/newpass_endpoint.php(102): Prepare_crud->update()
+#2 {main}
+  thrown in /home/djfr02j5c9ea/public_html/account.tunnelvpn.com/backend/controller/prepare-crud.php on line 187
+2024-10-07 12:20:38 - [INFO] - NewPass API accessed from IP: 58.65.163.185
+2024-10-07 12:20:38 - [INFO] - Including configuration and CRUD files
+2024-10-07 12:20:38 - [INFO] - Initializing CRUD object
+2024-10-07 12:20:38 - [INFO] - Decoding JSON input
+2024-10-07 12:20:38 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [old_password] => 123456789
+    [new_password] => 987654321
+)
+
+2024-10-07 12:20:38 - [INFO] - Input validation passed
+2024-10-07 12:20:38 - [INFO] - Fetching user data for username: aashir and email: aashir04m@gmail.com
+2024-10-07 12:20:38 - [INFO] - User found: Array
+(
+    [user_id] => 139
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [password] => $2y$10$9I3a7UbHvBVu1Kpsk48RG.ALxJeOJ6r3cc4/m35a5uqKg9Thd5ZaW
+    [registration_date] => 2024-10-06 19:12:35
+    [last_login] => 2024-10-07 11:54:06
+    [is_verified] => 1
+    [verification_token] => 5325d282bc837c2f12fe36b9e503f586
+    [remember_token] => 52dfa02db3a8
+    [google_id] => 
+    [apple_id] => 
+    [auth_provider] => local
+    [total_data_usage] => 0.00
+)
+
+2024-10-07 12:20:38 - [INFO] - Old password verified successfully
+2024-10-07 12:20:38 - [INFO] - Updating password for user ID: 139
+2024-10-07 12:20:38 - [INFO] - Update data: Array
+(
+    [password] => $2y$10$HoAYZN4k3Jxkp5X3ilul7uQ5AaBIOVXqsbsucQTqm1TdqUP7sUFQ6
+)
+
+2024-10-07 12:20:38 - [INFO] - User ID for update: 139
+2024-10-07 12:20:38 - [SUCCESS] - Password updated successfully for user aashir
+2024-10-07 12:20:38 - [INFO] - NewPass API execution completed
+2024-10-07 12:20:46 - [INFO] - NewPass API accessed from IP: 58.65.163.185
+2024-10-07 12:20:46 - [INFO] - Including configuration and CRUD files
+2024-10-07 12:20:46 - [INFO] - Initializing CRUD object
+2024-10-07 12:20:46 - [INFO] - Decoding JSON input
+2024-10-07 12:20:46 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [old_password] => 123456789
+    [new_password] => 987654321
+)
+
+2024-10-07 12:20:46 - [INFO] - Input validation passed
+2024-10-07 12:20:46 - [INFO] - Fetching user data for username: aashir and email: aashir04m@gmail.com
+2024-10-07 12:20:46 - [INFO] - User found: Array
+(
+    [user_id] => 139
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [password] => $2y$10$HoAYZN4k3Jxkp5X3ilul7uQ5AaBIOVXqsbsucQTqm1TdqUP7sUFQ6
+    [registration_date] => 2024-10-06 19:12:35
+    [last_login] => 2024-10-07 11:54:06
+    [is_verified] => 1
+    [verification_token] => 5325d282bc837c2f12fe36b9e503f586
+    [remember_token] => 52dfa02db3a8
+    [google_id] => 
+    [apple_id] => 
+    [auth_provider] => local
+    [total_data_usage] => 0.00
+)
+
+2024-10-07 12:20:46 - [ERROR] - Error: Old password is incorrect
+2024-10-07 12:20:46 - [INFO] - NewPass API execution completed
+2024-10-07 13:18:03 - [INFO] - NewPass API accessed from IP: 58.65.163.185
+2024-10-07 13:18:03 - [INFO] - Including configuration and CRUD files
+2024-10-07 13:18:03 - [INFO] - Initializing CRUD object
+2024-10-07 13:18:03 - [INFO] - Decoding JSON input
+2024-10-07 13:18:03 - [ERROR] - Error: Invalid JSON input: Syntax error
+2024-10-07 13:18:03 - [INFO] - NewPass API execution completed
+2024-10-07 14:41:44 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-07 14:41:44 - [INFO] - Including configuration and CRUD files
+2024-10-07 14:41:44 - [INFO] - Initializing CRUD object
+2024-10-07 14:41:44 - [INFO] - Decoding JSON input
+2024-10-07 14:41:44 - [INFO] - Received data: Array
+(
+    [username] => ydzyd
+    [email] => yd,gd,
+    [old_password] => tsZt
+    [new_password] => ,y,y
+)
+
+2024-10-07 14:41:44 - [ERROR] - Error: Invalid email format
+2024-10-07 14:41:44 - [INFO] - NewPass API execution completed
+2024-10-07 14:43:16 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-07 14:43:16 - [INFO] - Including configuration and CRUD files
+2024-10-07 14:43:16 - [INFO] - Initializing CRUD object
+2024-10-07 14:43:16 - [INFO] - Decoding JSON input
+2024-10-07 14:43:16 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [old_password] => 987654321
+    [new_password] => 123456789
+)
+
+2024-10-07 14:43:16 - [INFO] - Input validation passed
+2024-10-07 14:43:16 - [INFO] - Fetching user data for username: aashir and email: aashir04m@gmail.com
+2024-10-07 14:43:16 - [INFO] - User found: Array
+(
+    [user_id] => 139
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [password] => $2y$10$HoAYZN4k3Jxkp5X3ilul7uQ5AaBIOVXqsbsucQTqm1TdqUP7sUFQ6
+    [registration_date] => 2024-10-06 19:12:35
+    [last_login] => 2024-10-07 12:36:05
+    [is_verified] => 1
+    [verification_token] => 5325d282bc837c2f12fe36b9e503f586
+    [remember_token] => 8d276d2dd408
+    [google_id] => 
+    [apple_id] => 
+    [auth_provider] => local
+    [total_data_usage] => 140.00
+    [last_reset_date] => 2024-10-07 06:05:06
+)
+
+2024-10-07 14:43:16 - [INFO] - Old password verified successfully
+2024-10-07 14:43:16 - [INFO] - Updating password for user ID: 139
+2024-10-07 14:43:16 - [INFO] - Update data: Array
+(
+    [password] => $2y$10$JqXkn2wud9BNMAXv7ycIOONToSQc.ku2.O5FGiVfAz4M0VYzyeWdi
+)
+
+2024-10-07 14:43:16 - [INFO] - User ID for update: 139
+2024-10-07 14:43:16 - [SUCCESS] - Password updated successfully for user aashir
+2024-10-07 14:43:16 - [INFO] - NewPass API execution completed
+2024-10-07 14:44:24 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-07 14:44:24 - [INFO] - Including configuration and CRUD files
+2024-10-07 14:44:24 - [INFO] - Initializing CRUD object
+2024-10-07 14:44:24 - [INFO] - Decoding JSON input
+2024-10-07 14:44:24 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [old_password] => 987654321
+    [new_password] => 123456789
+)
+
+2024-10-07 14:44:24 - [INFO] - Input validation passed
+2024-10-07 14:44:24 - [INFO] - Fetching user data for username: aashir and email: aashir04m@gmail.com
+2024-10-07 14:44:24 - [INFO] - User found: Array
+(
+    [user_id] => 139
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [password] => $2y$10$JqXkn2wud9BNMAXv7ycIOONToSQc.ku2.O5FGiVfAz4M0VYzyeWdi
+    [registration_date] => 2024-10-06 19:12:35
+    [last_login] => 2024-10-07 12:36:05
+    [is_verified] => 1
+    [verification_token] => 5325d282bc837c2f12fe36b9e503f586
+    [remember_token] => 8d276d2dd408
+    [google_id] => 
+    [apple_id] => 
+    [auth_provider] => local
+    [total_data_usage] => 140.00
+    [last_reset_date] => 2024-10-07 06:05:06
+)
+
+2024-10-07 14:44:24 - [ERROR] - Error: Old password is incorrect
+2024-10-07 14:44:24 - [INFO] - NewPass API execution completed
+2024-10-07 14:45:54 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-07 14:45:54 - [INFO] - Including configuration and CRUD files
+2024-10-07 14:45:54 - [INFO] - Initializing CRUD object
+2024-10-07 14:45:54 - [INFO] - Decoding JSON input
+2024-10-07 14:45:54 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [old_password] => 987654321
+    [new_password] => 123456789
+)
+
+2024-10-07 14:45:54 - [INFO] - Input validation passed
+2024-10-07 14:45:54 - [INFO] - Fetching user data for username: aashir and email: aashir04m@gmail.com
+2024-10-07 14:45:54 - [INFO] - User found: Array
+(
+    [user_id] => 139
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [password] => $2y$10$JqXkn2wud9BNMAXv7ycIOONToSQc.ku2.O5FGiVfAz4M0VYzyeWdi
+    [registration_date] => 2024-10-06 19:12:35
+    [last_login] => 2024-10-07 12:36:05
+    [is_verified] => 1
+    [verification_token] => 5325d282bc837c2f12fe36b9e503f586
+    [remember_token] => 8d276d2dd408
+    [google_id] => 
+    [apple_id] => 
+    [auth_provider] => local
+    [total_data_usage] => 140.00
+    [last_reset_date] => 2024-10-07 06:05:06
+)
+
+2024-10-07 14:45:54 - [ERROR] - Error: Old password is incorrect
+2024-10-07 14:45:54 - [INFO] - NewPass API execution completed
+2024-10-07 14:46:21 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-07 14:46:21 - [INFO] - Including configuration and CRUD files
+2024-10-07 14:46:21 - [INFO] - Initializing CRUD object
+2024-10-07 14:46:21 - [INFO] - Decoding JSON input
+2024-10-07 14:46:21 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [old_password] => 123456789
+    [new_password] => 1234567890
+)
+
+2024-10-07 14:46:21 - [INFO] - Input validation passed
+2024-10-07 14:46:21 - [INFO] - Fetching user data for username: aashir and email: aashir04m@gmail.com
+2024-10-07 14:46:21 - [INFO] - User found: Array
+(
+    [user_id] => 139
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [password] => $2y$10$JqXkn2wud9BNMAXv7ycIOONToSQc.ku2.O5FGiVfAz4M0VYzyeWdi
+    [registration_date] => 2024-10-06 19:12:35
+    [last_login] => 2024-10-07 12:36:05
+    [is_verified] => 1
+    [verification_token] => 5325d282bc837c2f12fe36b9e503f586
+    [remember_token] => 8d276d2dd408
+    [google_id] => 
+    [apple_id] => 
+    [auth_provider] => local
+    [total_data_usage] => 140.00
+    [last_reset_date] => 2024-10-07 06:05:06
+)
+
+2024-10-07 14:46:21 - [INFO] - Old password verified successfully
+2024-10-07 14:46:21 - [INFO] - Updating password for user ID: 139
+2024-10-07 14:46:21 - [INFO] - Update data: Array
+(
+    [password] => $2y$10$XnQSOLDNW5cqjCBIgt19IeSdbwhrwy4.Nparzay2l3wetGXTfVkJq
+)
+
+2024-10-07 14:46:21 - [INFO] - User ID for update: 139
+2024-10-07 14:46:21 - [SUCCESS] - Password updated successfully for user aashir
+2024-10-07 14:46:21 - [INFO] - NewPass API execution completed
+2024-10-07 14:48:21 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-07 14:48:21 - [INFO] - Including configuration and CRUD files
+2024-10-07 14:48:21 - [INFO] - Initializing CRUD object
+2024-10-07 14:48:21 - [INFO] - Decoding JSON input
+2024-10-07 14:48:21 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [old_password] => 1234567890
+    [new_password] => 12345678
+)
+
+2024-10-07 14:48:21 - [INFO] - Input validation passed
+2024-10-07 14:48:21 - [INFO] - Fetching user data for username: aashir and email: aashir04m@gmail.com
+2024-10-07 14:48:21 - [INFO] - User found: Array
+(
+    [user_id] => 139
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [password] => $2y$10$XnQSOLDNW5cqjCBIgt19IeSdbwhrwy4.Nparzay2l3wetGXTfVkJq
+    [registration_date] => 2024-10-06 19:12:35
+    [last_login] => 2024-10-07 14:46:43
+    [is_verified] => 1
+    [verification_token] => 5325d282bc837c2f12fe36b9e503f586
+    [remember_token] => 5e8358f5ccc0
+    [google_id] => 
+    [apple_id] => 
+    [auth_provider] => local
+    [total_data_usage] => 140.00
+    [last_reset_date] => 2024-10-07 06:05:06
+)
+
+2024-10-07 14:48:21 - [INFO] - Old password verified successfully
+2024-10-07 14:48:22 - [INFO] - Updating password for user ID: 139
+2024-10-07 14:48:22 - [INFO] - Update data: Array
+(
+    [password] => $2y$10$lnofown54Pmr99TcTtEms.OFyCFlH07bk1JtC13RbMdUbCXNZGKny
+)
+
+2024-10-07 14:48:22 - [INFO] - User ID for update: 139
+2024-10-07 14:48:22 - [SUCCESS] - Password updated successfully for user aashir
+2024-10-07 14:48:22 - [INFO] - NewPass API execution completed
+2024-10-07 14:59:45 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-07 14:59:45 - [INFO] - Including configuration and CRUD files
+2024-10-07 14:59:45 - [INFO] - Initializing CRUD object
+2024-10-07 14:59:45 - [INFO] - Decoding JSON input
+2024-10-07 14:59:45 - [INFO] - Received data: Array
+(
+    [username] => 
+    [email] => 
+    [old_password] => 
+    [new_password] => 
+)
+
+2024-10-07 14:59:45 - [ERROR] - Error: Missing required fields: username, email, old_password, new_password
+2024-10-07 14:59:45 - [INFO] - NewPass API execution completed
+2024-10-10 07:38:25 - [INFO] - NewPass API accessed from IP: 39.62.137.178
+2024-10-10 07:38:25 - [INFO] - Including configuration and CRUD files
+2024-10-10 07:38:25 - [INFO] - Initializing CRUD object
+2024-10-10 07:38:25 - [INFO] - Decoding JSON input
+2024-10-10 07:38:25 - [INFO] - Received data: Array
+(
+    [username] => aa
+    [email] => maggshr9980@gmail.com
+    [old_password] => 123456789
+    [new_password] => 987654331
+)
+
+2024-10-10 07:38:25 - [INFO] - Input validation passed
+2024-10-10 07:38:25 - [INFO] - Fetching user data for username: aa and email: maggshr9980@gmail.com
+2024-10-10 07:38:25 - [ERROR] - Error: User not found
+2024-10-10 07:38:25 - [INFO] - NewPass API execution completed
+2024-10-10 07:39:09 - [INFO] - NewPass API accessed from IP: 39.62.137.178
+2024-10-10 07:39:09 - [INFO] - Including configuration and CRUD files
+2024-10-10 07:39:09 - [INFO] - Initializing CRUD object
+2024-10-10 07:39:09 - [INFO] - Decoding JSON input
+2024-10-10 07:39:09 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => 
+    [old_password] => 
+    [new_password] => 
+)
+
+2024-10-10 07:39:09 - [ERROR] - Error: Missing required fields: email, old_password, new_password
+2024-10-10 07:39:09 - [INFO] - NewPass API execution completed
+2024-10-10 07:39:32 - [INFO] - NewPass API accessed from IP: 39.62.137.178
+2024-10-10 07:39:32 - [INFO] - Including configuration and CRUD files
+2024-10-10 07:39:32 - [INFO] - Initializing CRUD object
+2024-10-10 07:39:32 - [INFO] - Decoding JSON input
+2024-10-10 07:39:32 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => maggshr9980@gmail.com
+    [old_password] => 123456789
+    [new_password] => 987654321
+)
+
+2024-10-10 07:39:32 - [INFO] - Input validation passed
+2024-10-10 07:39:32 - [INFO] - Fetching user data for username: aashir and email: maggshr9980@gmail.com
+2024-10-10 07:39:32 - [ERROR] - Error: User not found
+2024-10-10 07:39:32 - [INFO] - NewPass API execution completed
+2024-10-10 17:56:02 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-10 17:56:02 - [INFO] - Including configuration and CRUD files
+2024-10-10 17:56:02 - [INFO] - Initializing CRUD object
+2024-10-10 17:56:02 - [INFO] - Decoding JSON input
+2024-10-10 17:56:02 - [INFO] - Received data: Array
+(
+    [username] => 
+    [email] => 
+    [old_password] => 
+    [new_password] => 
+)
+
+2024-10-10 17:56:02 - [ERROR] - Error: Missing required fields: username, email, old_password, new_password
+2024-10-10 17:56:02 - [INFO] - NewPass API execution completed
+2024-10-10 17:56:42 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-10 17:56:42 - [INFO] - Including configuration and CRUD files
+2024-10-10 17:56:42 - [INFO] - Initializing CRUD object
+2024-10-10 17:56:42 - [INFO] - Decoding JSON input
+2024-10-10 17:56:42 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => masnxmsmsnhr9980@gmail.com
+    [old_password] => 123456789
+    [new_password] => 987654321
+)
+
+2024-10-10 17:56:42 - [INFO] - Input validation passed
+2024-10-10 17:56:42 - [INFO] - Fetching user data for username: aashir and email: masnxmsmsnhr9980@gmail.com
+2024-10-10 17:56:42 - [ERROR] - Error: User not found
+2024-10-10 17:56:42 - [INFO] - NewPass API execution completed
+2024-10-10 17:57:11 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-10 17:57:11 - [INFO] - Including configuration and CRUD files
+2024-10-10 17:57:11 - [INFO] - Initializing CRUD object
+2024-10-10 17:57:11 - [INFO] - Decoding JSON input
+2024-10-10 17:57:11 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => masnxmsmsnhr9980@gmail.com
+    [old_password] => 123456789
+    [new_password] => 987654321
+)
+
+2024-10-10 17:57:11 - [INFO] - Input validation passed
+2024-10-10 17:57:11 - [INFO] - Fetching user data for username: aashir and email: masnxmsmsnhr9980@gmail.com
+2024-10-10 17:57:11 - [ERROR] - Error: User not found
+2024-10-10 17:57:11 - [INFO] - NewPass API execution completed
+2024-10-10 17:58:34 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-10 17:58:34 - [INFO] - Including configuration and CRUD files
+2024-10-10 17:58:34 - [INFO] - Initializing CRUD object
+2024-10-10 17:58:34 - [INFO] - Decoding JSON input
+2024-10-10 17:58:34 - [INFO] - Received data: Array
+(
+    [username] => 
+    [email] => masnxmsmsnhr9980@gmail.com
+    [old_password] => 123456789
+    [new_password] => 987654321
+)
+
+2024-10-10 17:58:34 - [ERROR] - Error: Missing required fields: username
+2024-10-10 17:58:34 - [INFO] - NewPass API execution completed
+2024-10-10 17:58:52 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-10 17:58:52 - [INFO] - Including configuration and CRUD files
+2024-10-10 17:58:52 - [INFO] - Initializing CRUD object
+2024-10-10 17:58:52 - [INFO] - Decoding JSON input
+2024-10-10 17:58:52 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => masnxmsmsnhr9980@gmail.com
+    [old_password] => 123456789
+    [new_password] => 987654321
+)
+
+2024-10-10 17:58:52 - [INFO] - Input validation passed
+2024-10-10 17:58:52 - [INFO] - Fetching user data for username: aashir and email: masnxmsmsnhr9980@gmail.com
+2024-10-10 17:58:52 - [ERROR] - Error: User not found
+2024-10-10 17:58:52 - [INFO] - NewPass API execution completed
+2024-10-10 18:12:53 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-10 18:12:53 - [INFO] - Including configuration and CRUD files
+2024-10-10 18:12:53 - [INFO] - Initializing CRUD object
+2024-10-10 18:12:53 - [INFO] - Decoding JSON input
+2024-10-10 18:12:53 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [old_password] => 123456789
+    [new_password] => 987654321
+)
+
+2024-10-10 18:12:53 - [INFO] - Input validation passed
+2024-10-10 18:12:53 - [INFO] - Fetching user data for username: aashir and email: aashir04m@gmail.com
+2024-10-10 18:12:53 - [INFO] - User found: Array
+(
+    [user_id] => 162
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [password] => $2y$10$vtwjZVL2ql4wxR0ViBcQNeblMhlVS9j8lPVHzXuD7.igmNKPWyCxG
+    [registration_date] => 2024-10-07 20:19:19
+    [last_login] => 2024-10-10 17:55:52
+    [is_verified] => 1
+    [verification_token] => 2e14401e28c5dea0cf5d8b6d20b831d2
+    [remember_token] => 29b69634e223
+    [google_id] => 
+    [apple_id] => 
+    [auth_provider] => local
+    [total_data_usage] => 491.80
+    [last_reset_date] => 2024-10-07 13:19:19
+)
+
+2024-10-10 18:12:53 - [INFO] - Old password verified successfully
+2024-10-10 18:12:53 - [INFO] - Updating password for user ID: 162
+2024-10-10 18:12:53 - [INFO] - Update data: Array
+(
+    [password] => $2y$10$GHNIbFp4171BiHmoBV0SQuTn1RGAHc9uUQRkpVNFfZrqROXoDhf7y
+)
+
+2024-10-10 18:12:53 - [INFO] - User ID for update: 162
+2024-10-10 18:12:53 - [SUCCESS] - Password updated successfully for user aashir
+2024-10-10 18:12:53 - [INFO] - NewPass API execution completed
+2024-10-10 18:15:34 - [INFO] - NewPass API accessed from IP: 154.192.8.4
+2024-10-10 18:15:34 - [INFO] - Including configuration and CRUD files
+2024-10-10 18:15:34 - [INFO] - Initializing CRUD object
+2024-10-10 18:15:34 - [INFO] - Decoding JSON input
+2024-10-10 18:15:34 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [old_password] => 987654321
+    [new_password] => 123456789
+)
+
+2024-10-10 18:15:34 - [INFO] - Input validation passed
+2024-10-10 18:15:34 - [INFO] - Fetching user data for username: aashir and email: aashir04m@gmail.com
+2024-10-10 18:15:34 - [INFO] - User found: Array
+(
+    [user_id] => 162
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [password] => $2y$10$GHNIbFp4171BiHmoBV0SQuTn1RGAHc9uUQRkpVNFfZrqROXoDhf7y
+    [registration_date] => 2024-10-07 20:19:19
+    [last_login] => 2024-10-10 18:13:09
+    [is_verified] => 1
+    [verification_token] => 2e14401e28c5dea0cf5d8b6d20b831d2
+    [remember_token] => 166242cdb324
+    [google_id] => 
+    [apple_id] => 
+    [auth_provider] => local
+    [total_data_usage] => 491.80
+    [last_reset_date] => 2024-10-07 13:19:19
+)
+
+2024-10-10 18:15:34 - [INFO] - Old password verified successfully
+2024-10-10 18:15:34 - [INFO] - Updating password for user ID: 162
+2024-10-10 18:15:34 - [INFO] - Update data: Array
+(
+    [password] => $2y$10$upPPxEHJrQNdLVHwk0Fr9e5UpIwUpUGrlwTtOjvWlBCLYgpLWvbcK
+)
+
+2024-10-10 18:15:34 - [INFO] - User ID for update: 162
+2024-10-10 18:15:34 - [SUCCESS] - Password updated successfully for user aashir
+2024-10-10 18:15:34 - [INFO] - NewPass API execution completed
+2024-10-13 12:49:00 - [INFO] - NewPass API accessed from IP: 175.107.235.139
+2024-10-13 12:49:00 - [INFO] - Including configuration and CRUD files
+2024-10-13 12:49:00 - [INFO] - Initializing CRUD object
+2024-10-13 12:49:00 - [INFO] - Decoding JSON input
+2024-10-13 12:49:00 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => mashr9980@gmail.com
+    [old_password] => 123456789
+    [new_password] => 987654321
+)
+
+2024-10-13 12:49:00 - [INFO] - Input validation passed
+2024-10-13 12:49:00 - [INFO] - Fetching user data for username: aashir and email: mashr9980@gmail.com
+2024-10-13 12:49:00 - [INFO] - User found: Array
+(
+    [user_id] => 175
+    [username] => aashir
+    [email] => mashr9980@gmail.com
+    [password] => $2y$10$NaJkczfVUnmGPWxPL4VjJ.ygAf0LRVI1PAvbrvEATkMDwwayWYENa
+    [registration_date] => 2024-10-13 12:47:42
+    [last_login] => 2024-10-13 12:47:42
+    [is_verified] => 1
+    [verification_token] => a45d74983d9ed640fa59d09377c1f653
+    [remember_token] => b314a131ed4bad69ca6495adbdd4681e
+    [google_id] => 
+    [apple_id] => 
+    [auth_provider] => local
+    [total_data_usage] => 3.40
+    [last_reset_date] => 2024-10-13 05:47:42
+)
+
+2024-10-13 12:49:00 - [INFO] - Old password verified successfully
+2024-10-13 12:49:00 - [INFO] - Updating password for user ID: 175
+2024-10-13 12:49:00 - [INFO] - Update data: Array
+(
+    [password] => $2y$10$TZzFtO11rxuMRlU4CkaE0eQ2YfYUiOY/Ea9fd6XjOYt3d0j3BHqjS
+)
+
+2024-10-13 12:49:00 - [INFO] - User ID for update: 175
+2024-10-13 12:49:00 - [SUCCESS] - Password updated successfully for user aashir
+2024-10-13 12:49:00 - [INFO] - NewPass API execution completed

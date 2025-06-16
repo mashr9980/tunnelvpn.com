@@ -1,0 +1,22 @@
+.logo{
+
+	&__link{
+		font-weight: @font__medium;
+		line-height: 40px;
+		letter-spacing: 0.02em;
+		font-size: 20px;
+		color: white;
+		display: inline-block;
+		vertical-align: top;
+		.transition(color);
+
+		.header--fixed &{
+			color: @color__primary;
+		}
+	}
+
+	&__image{
+		display: block;
+		height: 40px;
+	}
+}

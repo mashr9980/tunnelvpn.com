@@ -1,0 +1,107 @@
+2024-08-30 17:05:36 - ::1 - /vsapp/backend/api/user-auth-api.php?action=forgotpass
+2024-08-30 17:06:23 - ::1 - /vsapp/backend/api/user-auth-api.php?action=NewPass
+2024-08-30 17:07:28 - ::1 - /vsapp/backend/api/user-auth-api.php?action=register
+2024-08-30 17:11:36 - ::1 - /vsapp/backend/api/purchase-api.php?action=NewPurchase
+2024-08-30 17:49:15 - ::1 - /vsapp/backend/api/user-auth-api.php?action=register
+2024-08-30 17:50:54 - ::1 - /vsapp/backend/api/user-auth-api.php?action=register
+2024-08-30 17:52:11 - ::1 - /vsapp/backend/api/user-auth-api.php
+2024-08-30 17:52:59 - ::1 - /vsapp/backend/api/user-auth-api.php?action=register
+2024-09-02 11:34:42 - 58.65.221.75 - /backend/api/user-auth-api.php?action=register
+2024-09-02 11:51:53 - 58.65.163.185 - /backend/api/user-auth-api.php?action=forgotpass
+2024-09-02 11:52:02 - 58.65.163.185 - /backend/api/user-auth-api.php?action=forgotpass
+2024-09-02 11:52:52 - 58.65.163.185 - /backend/api/user-auth-api.php?action=NewPass
+2024-09-03 05:10:26 - 58.65.163.185 - /backend/api/purchase-api.php?action=NewPurchase
+2024-09-06 10:34:36 - 58.65.163.185 - /backend/api/user-auth-api.php?action=forgotpass
+2024-09-10 09:05:23 - 183.182.114.219 - /backend/api/user-auth-api.php?action=register
+2024-09-10 09:06:51 - 183.182.114.219 - /backend/api/user-auth-api.php?action=register
+2024-09-10 09:07:04 - 183.182.114.219 - /backend/api/user-auth-api.php?action=register
+2024-09-13 10:09:30 - 58.65.221.75 - /backend/api/user-auth-api.php?action=register
+2024-09-13 11:12:01 - 58.65.163.185 - /backend/api/user-auth-api.php?action=register
+2024-09-25 18:50:42 - 58.65.221.75 - /backend/api/user-auth-api.php?action=forgotpass
+2024-09-29 11:12:48 - 223.123.10.52 - /backend/api/user-auth-api.php?action=register
+2024-10-03 18:34:13 - 58.65.163.185 - /backend/api/user-auth-api.php?action=forgotpass
+2024-10-03 18:46:07 - 58.65.163.185 - /backend/api/user-auth-api.php?action=forgotpass
+2024-10-03 19:08:26 - 154.192.8.4 - /backend/api/user-auth-api.php?action=forgotpass
+2024-10-03 19:22:35 - 154.192.8.4 - /backend/api/user-auth-api.php?action=forgotpass
+2024-10-03 19:29:20 - 154.192.8.4 - /backend/api/user-auth-api.php?action=forgotpass
+2024-10-03 19:49:26 - 154.192.8.4 - /backend/api/user-auth-api.php?action=forgotpass
+2024-10-03 19:50:45 - 154.192.8.4 - /backend/api/user-auth-api.php?action=forgotpass
+2024-10-03 19:59:01 - 58.65.163.185 - /backend/api/user-auth-api.php?action=forgotpass
+2024-10-03 20:15:38 - 58.65.163.185 - /backend/api/user-auth-api.php?action=forgotpass
+2024-10-03 20:22:11 - 58.65.163.185 - /backend/api/user-auth-api.php?action=forgotpass
+2024-10-03 20:34:31 - 58.65.163.185 - /backend/api/user-auth-api.php?action=forgotpass
+2024-10-03 20:34:58 - 58.65.163.185 - /backend/api/user-auth-api.php?action=register
+2024-10-03 20:35:07 - 58.65.163.185 - /backend/api/user-auth-api.php?action=register
+2024-10-03 20:35:13 - 58.65.163.185 - /backend/api/user-auth-api.php?action=register
+2024-10-03 20:35:34 - 58.65.163.185 - /backend/api/user-auth-api.php?action=register
+2024-10-03 20:35:45 - 58.65.163.185 - /backend/api/user-auth-api.php?action=register
+2024-10-03 20:35:59 - 58.65.163.185 - /backend/api/user-auth-api.php?action=register
+2024-10-06 08:40:20 - 58.65.221.75 - /backend/api/user-auth-api.php?action=register
+2024-10-06 08:43:47 - 58.65.221.75 - /backend/api/user-auth-api.php?action=register
+2024-10-07 11:30:29 - 58.65.163.185 - /backend/api/user-auth-api.php
+2024-10-07 11:31:04 - 58.65.163.185 - /backend/api/user-auth-api.php?action=login
+2024-10-07 11:31:57 - 58.65.163.185 - /backend/api/user-auth-api.php?action=login
+2024-10-07 11:32:06 - 58.65.163.185 - /backend/api/user-auth-api.php?action=login
+2024-10-07 11:38:14 - 58.65.163.185 - /backend/api/user-auth-api.php?action=NewPass
+2024-10-07 11:39:12 - 58.65.163.185 - /backend/api/user-auth-api.php?action=NewPass
+2024-10-07 11:39:24 - 58.65.163.185 - /backend/api/user-auth-api.php?action=NewPass
+2024-10-07 11:39:28 - 58.65.163.185 - /backend/api/user-auth-api.php?action=NewPass
+2024-10-07 11:41:42 - 58.65.163.185 - /backend/api/user-auth-api.php?action=NewPass
+2024-10-07 11:44:35 - 58.65.163.185 - /backend/api/user-auth-api.php?action=NewPass
+2024-10-07 11:44:35 - NewPass - NewPass action started
+2024-10-07 11:44:35 - NewPass - Received data: {"username":"aashir","email":"aashir04m@gmail.com","old_password":"123456789","new_password":"987654321"}
+2024-10-07 11:44:35 - NewPass - All required fields present
+2024-10-07 11:44:35 - NewPass - Attempting to fetch user data for username: aashir and email: aashir04m@gmail.com
+2024-10-07 11:44:35 - NewPass - User data fetched successfully
+2024-10-07 11:44:35 - NewPass - Verifying old password
+2024-10-07 11:44:35 - NewPass - Old password verified successfully
+2024-10-07 11:44:35 - NewPass - Hashing new password
+2024-10-07 11:44:35 - NewPass - Attempting to update password in database
+2024-10-07 11:49:11 - 58.65.163.185 - /backend/api/user-auth-api.php?action=NewPass
+2024-10-07 11:52:07 - 58.65.163.185 - /backend/api/user-auth-api.php?action=NewPass
+2024-10-07 11:52:12 - 58.65.163.185 - /backend/api/user-auth-api.php?action=NewPassa
+2024-10-07 11:52:20 - 58.65.163.185 - /backend/api/user-auth-api.php?action=NewPass
+2024-10-07 11:52:57 - Script started - /backend/api/user-auth-api.php?action=NewPass
+2024-10-07 11:55:33 - Script started - /backend/api/user-auth-api.php?action=NewPass
+2024-10-07 12:01:54 - 58.65.163.185 - /backend/api/user-auth-api.php?action=NewPass
+2024-10-07 12:01:54 - 58.65.163.185 - NewPass API accessed
+2024-10-07 12:05:50 - 58.65.163.185 - /backend/api/user-auth-api.php?action=NewPass
+2024-10-07 19:31:39 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 19:32:37 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 19:38:08 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 19:38:59 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 19:39:09 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 19:39:18 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 19:41:12 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 19:41:20 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 19:42:14 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 19:52:00 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 20:00:33 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 20:00:39 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 20:00:44 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 20:02:11 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 20:04:51 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 20:06:46 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 20:12:43 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 20:15:16 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 20:19:19 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-07 20:43:11 - 13.235.86.43 - /backend/api/user-auth-api.php?action=register
+2024-10-07 21:54:39 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-09 03:29:51 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-09 03:51:02 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-09 03:54:12 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-09 04:14:31 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-09 04:19:43 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-09 04:19:51 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-09 04:20:34 - 154.192.8.4 - /backend/api/user-auth-api.php?action=login
+2024-10-09 04:20:43 - 154.192.8.4 - /backend/api/user-auth-api.php?action=login
+2024-10-09 04:24:56 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-09 04:25:06 - 154.192.8.4 - /backend/api/user-auth-api.php?action=login
+2024-10-09 04:26:24 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-09 04:51:09 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-10 17:44:28 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-10 18:31:11 - 154.192.8.4 - /backend/api/user-auth-api.php?action=register
+2024-10-13 12:47:42 - 175.107.235.139 - /backend/api/user-auth-api.php?action=register
+2024-10-15 21:03:19 - 175.107.235.139 - /backend/api/user-auth-api.php?action=register
+2024-11-20 14:23:48 - 139.135.55.226 - /backend/api/user-auth-api.php?action=register
+2024-11-20 14:24:12 - 139.135.55.226 - /backend/api/user-auth-api.php?action=register

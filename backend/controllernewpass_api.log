@@ -1,0 +1,39 @@
+2024-10-07 12:15:48 - [INFO] - NewPass API accessed from IP: 58.65.163.185
+2024-10-07 12:15:48 - [INFO] - Including configuration and CRUD files
+2024-10-07 12:15:48 - [INFO] - Initializing CRUD object
+2024-10-07 12:15:48 - [INFO] - Decoding JSON input
+2024-10-07 12:15:48 - [INFO] - Received data: Array
+(
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [old_password] => 123456789
+    [new_password] => 987654321
+)
+
+2024-10-07 12:15:48 - [INFO] - Input validation passed
+2024-10-07 12:15:48 - [INFO] - Fetching user data for username: aashir and email: aashir04m@gmail.com
+2024-10-07 12:15:48 - [INFO] - User found: Array
+(
+    [user_id] => 139
+    [username] => aashir
+    [email] => aashir04m@gmail.com
+    [password] => $2y$10$9I3a7UbHvBVu1Kpsk48RG.ALxJeOJ6r3cc4/m35a5uqKg9Thd5ZaW
+    [registration_date] => 2024-10-06 19:12:35
+    [last_login] => 2024-10-07 11:54:06
+    [is_verified] => 1
+    [verification_token] => 5325d282bc837c2f12fe36b9e503f586
+    [remember_token] => 52dfa02db3a8
+    [google_id] => 
+    [apple_id] => 
+    [auth_provider] => local
+    [total_data_usage] => 0.00
+)
+
+2024-10-07 12:15:48 - [INFO] - Old password verified successfully
+2024-10-07 12:15:48 - [INFO] - Updating password for user ID: 139
+[07-Oct-2024 12:15:48 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /home/djfr02j5c9ea/public_html/account.tunnelvpn.com/backend/controller/prepare-crud.php:187
+Stack trace:
+#0 /home/djfr02j5c9ea/public_html/account.tunnelvpn.com/backend/controller/prepare-crud.php(187): mysqli_stmt->bind_param()
+#1 /home/djfr02j5c9ea/public_html/account.tunnelvpn.com/backend/controller/newpass_endpoint.php(104): Prepare_crud->update()
+#2 {main}
+  thrown in /home/djfr02j5c9ea/public_html/account.tunnelvpn.com/backend/controller/prepare-crud.php on line 187

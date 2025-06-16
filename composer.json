@@ -1,0 +1,25 @@
+{
+    "require": {
+        "php": "^7.3|^8.0",
+        "azimolabs/apple-sign-in-php-sdk": "^2.2",
+        "firebase/php-jwt": "^6.0",
+        "google/apiclient": "^2.14",
+        "griffinledingham/php-apple-signin": "^1.1",
+        "guzzlehttp/guzzle": "^7.4.5",
+        "guzzlehttp/psr7": "^1.9.1",
+        "stripe/stripe-php": "^15.7",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

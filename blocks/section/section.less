@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Block: Section
+   Dependencies: Fontello.less
+   ========================================================================== */
+
+.section{
+	padding: 90px 0;
+	position: relative;
+
+	&--grey{
+		background-color: @color__grey--light;
+	}
+
+	&--blue{
+		background-color: @color__secondary;
+		padding: 115px 0;
+	}
+
+	&--skin-1{
+		background-image: url("@{img__common--background}skin-1.jpg");
+		background-size: 100% 965px;
+		background-position: center 130px;
+		background-repeat: no-repeat;
+	}
+
+	&--skin-2{
+		background-image: url("@{img__common--background}skin-2.jpg");
+		background-size: 100% 965px;
+		background-position: center 130px;
+		background-repeat: no-repeat;
+	}
+
+	&--skin-3{
+		background-image: url("@{img__common--background}skin-3.jpg");
+		background-repeat: repeat;
+	}
+
+	&--large{
+		padding: 170px 0;
+	}
+
+	&--no-pb{
+		padding-bottom: 0 !important;
+	}
+
+	&__button{
+		background-color: #000;
+		color: white;
+		font-family: @font__secondary;
+		letter-spacing: 0.005em;
+		font-weight: @font__medium;
+		padding: 12px 20px;
+		position: absolute;
+		right: 0;
+		z-index: 5;
+		top: -19px;
+		-webkit-box-shadow: 0px 4px 20px 0px rgba(25,25,25,0.45);
+		box-shadow: 0px 4px 20px 0px rgba(25,25,25,0.45);
+
+		&--youtube{
+			&:before{
+				&:extend(.fontello-youtube-play:before);
+				margin-right: 6px;
+				color: #f10000;
+				font-family: @icon__primary;
+			}
+		}
+
+		&--twitter{
+			left: 0;
+			right: auto;
+
+			&:before{
+				&:extend(.fontello-twitter-bird:before);
+				margin-right: 6px;
+				color: #008efc;
+				font-family: @icon__primary;
+			}
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-large-x) {
+	.section{
+		&--skin-1, &--skin-2{
+			background: none;
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-medium) {
+	.section{
+		&--large{
+			padding: 100px 0;
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-small-x) {
+	.section{
+		padding: 60px 0;
+	}
+}

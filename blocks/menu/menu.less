@@ -1,0 +1,193 @@
+/* ==========================================================================
+   Block: Menu
+   Dependencies: jquery.superfish.less, Fontello.less
+   Docs: https://github.com/joeldbirch/superfish
+   ========================================================================== */
+
+.menu{
+	&--center{
+		text-align: center;
+	}
+
+	&--right{
+		text-align: right;
+	}
+
+
+	&__child{
+		font-family: @font__primary;
+		background-color: @color__primary--dark;
+		width: 200px;
+		padding: 20px 0;
+		-webkit-box-shadow: 0px 1px 7px 0px rgba(0,1,16,0.14);
+		box-shadow: 0px 1px 7px 0px rgba(0,1,16,0.14);
+		text-align: left;
+		
+		.header--fixed &{
+			background-color: white;
+		}
+
+		// Overriding the SuperFish styles
+		.sf-menu &{
+			left: 50%;
+			transform: translateX(-50%);
+			top: 45px;
+		}
+
+		.menu__child &{
+			top: -20px;
+		    left: 100%;
+		    transform: none;
+		}
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+
+		// Overriding the SuperFish styles
+		.menu > & {
+			float: none;
+		}
+
+		.menu__child &{
+			display: block;
+			padding: 0;
+		}
+
+		&--button{
+			border: 1px solid darken(@color__text--light, 30%);
+			border-radius: 21px;
+			.transition(background-color);
+
+			.header--fixed &{
+				border-color: @color__primary;
+			}
+
+			.menu__link{
+				color: @color__primary;
+				padding: 2px 40px 0 40px;
+				line-height: 36px;
+
+				.header--fixed &{
+					color: @color__primary;
+				}
+			}
+
+		}
+	}
+
+	&__link{
+		font-size: 12px;
+		line-height: 40px;
+		padding: 0 20px;
+		letter-spacing: 0.03em;
+		display: block;
+		color: #fff;
+		text-transform: uppercase;
+		vertical-align: top;
+		.transition(color);
+
+		.header--fixed &{
+			color: @color__text;
+		}
+
+		&.sf-with-ul:after{
+			&:extend(.fontello-angle-down:before);
+			margin-left: 5px;
+			font-size: 13px;
+			color: @color__text--light;
+			font-weight: @font__light;
+			font-family: @icon__primary;
+			position: absolute;
+			top: 0px;
+		}
+
+		// Nested
+		.menu__child &{
+			font-size: 12px;
+			line-height: 30px;
+			letter-spacing: 0.03em;
+			color: #fff;
+			padding: 6px 30px;
+			.transition(color);
+
+			.header--fixed &{
+				color: @color__text;
+			}
+
+			&.sf-with-ul{
+				padding: 6px 40px 6px 30px;
+			}
+
+			&.sf-with-ul:after{
+				&:extend(.fontello-angle-right:before);
+				position: absolute;
+				right: 30px;
+				top: 5px;
+			}
+		}
+
+		.menu__item:hover > &{
+			color: @color__primary;
+
+			&:after{
+				color: @color__primary;
+			}
+		}
+
+		// Hover State
+		&:hover{
+			text-decoration: none;
+			color: @color__primary;
+
+			&:after{
+				color: @color__primary;
+			}
+		}
+
+		// Hover State Nested
+		.menu__child &:hover{
+			color: @color__primary;
+			&:before{ width: 15px; }
+		}
+
+		// Active State
+		.menu__item--active > &{
+			color: @color__primary;
+		}
+
+		// Active State Nasted
+		.menu__child .menu__item--active &{
+			color: @color__primary;
+			position: relative;
+
+			&:before{
+				display: block;
+				content: '';
+				position: absolute;
+				top: 13px;
+				width: 15px;
+				height: 1px;
+				background-color: @color__primary;
+				left: -30px;
+			}
+
+			.menu--mobile &:before{
+				display: none;
+			}
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-large-x) {
+	.menu__link{
+		padding: 0 15px;
+	}
+}
+
+.media-mixin(@break) when (@break = @break-medium) {
+	.menu{
+		display: none;
+	}
+}

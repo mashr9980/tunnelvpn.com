@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Block: Socials
+   Dependencies: Fontello.less
+   ========================================================================== */
+
+.socials{
+	background-color: #0e0e0e;
+	display: inline-block;
+	vertical-align: top;
+	padding: 20px 10px;
+	-webkit-box-shadow: 0px 4px 20px 0px rgba(149,149,149,0.75);
+	box-shadow: 0px 4px 20px 0px rgba(25,25,25,0.75);
+
+	&--displaced{
+		position: absolute;
+		bottom: -21px;
+		left: 50%;
+		margin-left: -178px;
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 10px;
+	}
+
+	&__button{
+		.square(44px);
+		display: block;
+		color: white;
+		text-align: center;
+		line-height: 44px;
+
+		.transition-custom(color .25s ease, background-color .25s ease);
+
+		&--facebook{
+			background-color: #254d85;
+		}
+
+		&--twitter{
+			background-color: #00a6e0;
+		}
+
+		&--linkedin{
+			background-color: #0083bf;
+		}
+
+		&--google{
+			background-color: #dc543a;
+		}
+
+		&--pinterest{
+			background-color: #d83633;
+		}
+
+		&:hover{
+			background: white;
+			color: @color__primary;
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-small-x) {
+	.socials{
+		position: relative;
+		width: 100%;
+		left: 0;
+		margin: 0;
+		text-align: center;
+	    bottom: -60px;
+		box-shadow: none;
+		padding-bottom: 0;
+
+		&__item{
+			margin-bottom: 20px;
+		}
+
+	}
+}

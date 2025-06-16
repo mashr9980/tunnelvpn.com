@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Block: Video
+   Dependencies: no dependencies
+   ========================================================================== */
+
+.video{
+	position: relative;
+
+	&__button{
+		.square(70px);
+		.center(70px);
+		.transition-transform();
+		position: absolute;
+		border-radius: 50%;
+		border: 3px solid #fff;
+		z-index: 20;
+		text-align: center;
+		line-height: 62px;
+		text-indent: 4px;
+
+		&:before{
+			&:extend(.fontello-play:before);
+			font-size: 24px;
+			font-family: @icon__primary;
+			color: white;
+		}
+
+		.video__holder:hover &{
+			.transform(scale(1.2)); 
+		}
+	}
+
+	&__holder{
+		position: relative;
+		display: block;
+		z-index: 5;
+		width: 800px;
+		margin: 0 auto;
+		border: 1px dotted rgba(183, 184, 184, 0.5);
+		padding: 15px;
+	}
+
+	&__primary{
+		position: relative;
+		z-index: 15;
+		-webkit-box-shadow: 0px 8px 23px 0px rgba(0,1,16,0.3);
+		box-shadow: 0px 8px 23px 0px rgba(0,1,16,0.3);
+	}
+
+	&__secondary{
+		z-index: 10;
+		position: absolute;
+		top: 50%;
+		height: 70%;
+		.translateY(-50%);
+		-webkit-box-shadow: 0px 8px 23px 0px rgba(0,1,16,0.3);
+		box-shadow: 0px 8px 23px 0px rgba(0,1,16,0.3);
+
+		&--left{
+			left: -15%;
+		}
+
+		&--right{
+			right: -15%;
+		}
+	}
+}
+
+div.video:before{
+	display: block;
+	content: '';
+	position: absolute;
+	background-color: @color__secondary;
+	height: 100px;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	margin-top: -50px;
+	z-index: 1;
+}
+
+.media-mixin(@break) when (@break = @break-large-x) {
+	.video{
+		&__holder{
+			max-width: 70%;
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-medium) {
+	.video{
+		&__holder{
+			max-width: 80%;
+		}
+
+		&__secondary--left{
+			left: -30px;
+		}
+
+		&__secondary--right{
+			right: -30px;
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-small) {
+	.video{
+		&__holder{
+			max-width: 100%;
+		}
+
+		&__secondary--left, &__secondary--right{
+			display: none;
+		}
+	}
+}

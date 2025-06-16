@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Block: List
+   Dependencies: no dependencies
+   ========================================================================== */
+
+.list{
+	margin-bottom: 40px;
+	position: relative;
+
+	&--check{
+
+		.list__item{
+			&:before{
+				position: absolute;
+				left: 0;
+				margin-right: 8px;
+				color: @color__primary;
+				font-family: @icon__primary;
+				&:extend(.fontello-ok:before);
+			}
+		}
+		
+	}
+
+	&--boxes{
+		.list__item{
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+
+	&__item{
+		padding: 7px 0 7px 25px;
+		line-height: 25px;
+		font-size: 16px;
+	}
+}
+
+.media-mixin(@break) when (@break = @break-medium) {
+	.list{
+		max-width: 80%;
+		margin: 0 auto;
+		margin-bottom: 40px;
+
+		&--boxes{
+			text-align: center;
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-small) {
+	.list{
+		max-width: 90%;
+
+		&--boxes{
+
+			.list__item{
+				padding: 0;
+				margin-right: 30px;
+
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-small-x) {
+	.list{
+		&--boxes{
+			.list__item{
+				margin-right: 10px;
+			}
+		}
+	}
+}

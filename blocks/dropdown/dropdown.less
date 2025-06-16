@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Block: Dropdown
+   Dependencies: Fontello.less
+   ========================================================================== */
+
+.dropdown{
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+	*display: inline;
+	min-width: 200px;
+	text-align: left;
+	position: relative;
+	font-size: 16px;
+	font-style: italic;
+	font-family: @font__secondary;
+	color: @color__text;
+	background-color: white;
+	-webkit-box-shadow: 0px 2px 10px 0px rgba(16,16,16,0.86);
+	box-shadow: 0px 2px 10px 0px rgba(16,16,16,0.86);
+
+	&--full{
+		display: block;
+	}
+
+	&__icon{
+		color: @color__primary;
+		position: absolute;
+		font-size: 22px;
+		left: 15px;
+		top: 50%;
+		margin-top: -11px;
+	}
+
+	&--icon{
+		.dropdown__label{
+			padding-left: 55px;
+		}
+	}
+
+	&__label{
+		padding: 23px 15px;
+		cursor: pointer;
+		position: relative;
+
+		&:after{
+			content: "\f107";
+			font-family: @icon__primary;
+			position: absolute;
+			font-style: normal;
+			right: 20px;
+			top: 50%;
+			margin-top: -7px;
+			font-size: 20px;
+			color: #959595;
+			.transition(opacity);
+
+			.dropdown:hover &{
+				opacity: 0;
+			}
+		}
+	}
+
+	&__list{
+		visibility: hidden;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		top: 100%;
+		margin-top: -1px;
+		background-color: white;
+		z-index: 15;
+		opacity: 0;
+		.transition(opacity);
+
+		.dropdown:hover &{
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+
+	&__item{
+		padding: 23px 15px;
+		cursor: pointer;
+		.transition(color);
+
+		&:hover{
+			color: @color__primary;
+		}
+
+		&--active{
+			color: @color__primary;
+		}
+	}
+}

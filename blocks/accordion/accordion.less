@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Block: Accordion
+   Dependencies: no dependencies
+   ========================================================================== */
+
+.accordion{
+	&__item{
+		-webkit-box-shadow: 0px 1px 4px 0px rgba(204,204,204,0.75);
+		box-shadow: 0px 1px 4px 0px rgba(204,204,204,0.75);
+		padding: 0 40px 0 20px;
+	}
+
+	&__title{
+		font-size: 16px;
+		margin: 0;
+		padding: 25px 0 25px 45px;
+		font-family: @font__secondary;
+		position: relative;
+		line-height: 22px;
+		cursor: pointer;
+
+		&--active:after{
+			.rotate(90deg);
+		}
+
+		&:after{
+			&:extend(.fontello-angle-right:before);
+			font-family: @icon__primary;
+			display: block;
+			position: absolute;
+			.transition(transform);
+			top: 50%;
+			right: -15px;
+			font-size: 25px;
+			color: @color__text--light;
+			margin-top: -11px;
+		}
+	}
+
+	&__icon{
+		height: 40px;
+		left: 0px;
+		top: 50%;
+		margin-top: -20px;
+		position: absolute;
+	}
+
+	&__content{
+		display: none;
+		padding: 15px 0 30px 0;
+		line-height: 1.5;
+		font-size: 14px;
+
+		p:last-child{
+			margin: 0;
+		}
+	}
+}

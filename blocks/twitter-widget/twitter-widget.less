@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Block: Twitter Widget
+   Dependencies: Fontello.less
+   ========================================================================== */
+
+.twitter-widget{
+	color: white;
+
+	a{
+		color: white;
+		font-weight: @font__medium;
+	}
+
+	&__tweet{
+		position: relative;
+		padding-left: 30px;
+
+		&:after{
+			content: '\e804';
+			position: absolute;
+			display: block;
+			left: 0px;
+			font-size: 16px;
+			top: 5px;
+			font-family: @icon__primary;
+		}
+	}
+
+	&__content{
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: @font__light;
+		font-family: @font__secondary;
+		letter-spacing: 0.01em;
+	}
+
+	&__user{
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 5px;
+	}
+
+	&__date{
+		margin-top: 5px;
+	}
+
+	.link{
+		text-decoration: underline;
+	}
+
+	.TweetAuthor-avatar, .TweetAuthor-name, .TweetAuthor-verifiedBadge {
+		display: none;
+	}
+}

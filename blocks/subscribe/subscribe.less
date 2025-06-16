@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Block: Subscribe
+   Dependencies: no dependencies
+   ========================================================================== */
+
+.subscribe{
+	padding: 15px;
+	border: 1px dotted rgba(183, 184, 184, 0.3);
+}
+
+.media-mixin(@break) when (@break = @break-small) {
+	.subscribe{
+		.input{
+			margin-bottom: 30px;
+		}
+
+		.dropdown{
+			margin-bottom: 30px;
+		}
+	}
+}

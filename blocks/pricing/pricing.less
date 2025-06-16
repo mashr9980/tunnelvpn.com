@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Block: Pricing
+   Dependencies: Fontello.less
+   ========================================================================== */
+
+.pricing{
+	text-align: center;
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(205,205,205,0.6);
+	box-shadow: 0px 5px 20px 0px rgba(205,205,205,0.6);
+	padding: 60px 50px;
+	margin-top: 15px;
+
+	&--featured{
+		border: 3px solid @color__primary;
+		margin-top: 0;
+		padding: 72px 50px;
+		position: relative;
+		overflow: hidden;
+
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			.square(180px);
+			top: -90px;
+			right: -90px;
+			background: @color__primary;
+			border-radius: 50%;
+		}
+
+		&:after{
+			content: '\e812';
+			display: block;
+			font-family: @icon__primary;
+			color: white;
+			right: 15px;
+			top: 26px;
+			position: absolute;	
+			font-size: 35px;
+		}
+	}
+
+	&__title{
+		font-size: 16px;
+		font-family: @font__secondary;
+		font-weight: @font__bold;
+		text-transform: uppercase;
+		letter-spacing: 0.01em;
+		margin-bottom: 15px;
+	}
+
+	&__price{
+		text-transform: uppercase;
+		color: @color__primary;
+		font-weight: @font__bold;
+		font-size: 60px;
+	}
+
+	&__placeholder{
+		position: relative;
+	}
+
+	&__currency{
+		position: absolute;
+		font-size: 30px;
+		top: 10px;
+		left: -17px;
+		font-weight: @font__regular;
+	}
+
+	&__frequency{
+		position: absolute;
+		color: @color__text;
+		font-family: @font__secondary;
+		font-weight: @font__regular;
+		font-size: 16px;
+		bottom: 10px;
+	}
+
+	&__features{
+		margin-bottom: 50px;
+	}
+
+	&__feature{
+		padding: 15px 0;
+		font-size: 14px;
+
+		&--passive{
+			color: #c2c2c2;
+			text-decoration: line-through;
+		}
+	}
+
+	&__highlight{
+		color: @color__secondary;
+		font-weight: @font__medium;
+	}
+}
+
+.media-mixin(@break) when (@break = @break-large-x) {
+	.pricing{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+.media-mixin(@break) when (@break = @break-medium) {
+	.pricing{
+		margin-bottom: 60px;
+	}
+}

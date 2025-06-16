@@ -1,0 +1,194 @@
+/* ==========================================================================
+   Block: Slider
+   Dependencies: owl.carousel.less
+   Docs: https://github.com/OwlCarousel2/OwlCarousel2
+   ========================================================================== */
+
+.slider{
+	position: relative;
+
+	.owl-dots{
+		position: absolute;
+		counter-reset: dots;
+		color: white;
+		text-transform: uppercase;
+		font-weight: @font__medium;
+		.transform(rotate(-90deg));
+		left: 5%;
+		top: 50%;
+		margin-top: -115px;
+
+		.clear();
+	}
+
+	.owl-dots .owl-dot{
+		float: left;
+		margin-right: 30px;
+		padding-bottom: 3px;
+		position: relative;
+
+		&:after{
+			.transition(width);
+			content: '';
+			width: 0;
+			display: block;
+			content: '';
+			position: absolute;
+			height: 2px;
+			background: #45474b;
+			bottom: 0;
+		}
+
+		&.active:after{
+			width: 100%;
+		}
+
+		&:last-child{
+			margin: 0;
+		}
+	}
+
+	.owl-dots .owl-dot span{
+		&:before{
+			content: "slide";
+		}
+
+		&:after{
+			counter-increment: dots;
+			content: "0" counter(dots);
+			margin-left: 3px;
+
+			color: @color__primary;
+		}
+	}
+
+	&:after{
+		position: absolute;
+		content: '';
+		bottom: 0;
+		width: 100%;
+		height: 90px;
+		z-index: 20;
+		display: block;
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+		background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=0 );
+	}
+
+	&__slide{
+		padding-top: 85px;
+		position: relative;
+	}
+
+	&__image{
+		opacity: 0;
+		width: 470px !important;
+		margin: 0 auto;
+		z-index: 5;
+		position: relative;
+	}
+
+	&__secondary{
+		opacity: 0;
+		width: 290px !important;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: -457px;
+		z-index: 1;
+		-webkit-box-shadow: 0px 2px 9px 0px rgba(0,0,12,0.7);
+		box-shadow: 0px 2px 9px 0px rgba(0,0,12,0.7);
+
+		&--right{
+			left: auto;
+			right: 50%;
+			margin-right: -457px;
+		}
+
+	}
+
+	&__title{
+		text-align: center;
+		margin: 0 auto;
+		font-size: 26px;
+		color: white;
+		font-weight: @font__bold;
+		width: 600px;
+		max-width: 100%;
+		letter-spacing: -0.01em;
+		line-height: 39px;
+		opacity: 0;
+	}
+
+	&__highlight{
+		color: @color__primary;
+	}
+}
+
+@media all and (max-width: 1500px) {
+	.slider{
+		.owl-dots{
+			left: 0;
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-large-x) {
+	.slider{
+		&__image{
+			width: 350px !important;
+		}
+
+		.owl-dots{
+			margin-top: -25px;
+		}
+
+		&__secondary{
+			width: 215px !important;
+			margin-left: -339px;
+
+			&--right{
+				margin-right: -339px;
+			}
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-medium) {
+	.slider{
+		&__secondary{
+			display: none !important;
+		}
+		
+		&__slide{
+			padding-top: 50px;
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-small) {
+	.slider{
+
+		&__title{
+			padding: 0 60px;
+		}
+
+		.owl-dots{
+			margin-top: 30px;
+			left: -5%;
+		}
+	}
+}
+
+.media-mixin(@break) when (@break = @break-small-x) {
+	.slider{
+		&__title{
+			font-size: 20px;
+		}
+
+		.owl-dots{
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Block: Map
+   Dependencies: no dependencies
+   ========================================================================== */
+
+.map{
+	position: relative;
+	top: -90px;
+	height: 500px;
+	width: 100%;
+	z-index: 5;
+}
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+
+.media-mixin(@break) when (@break = @break-small) {
+	.map{
+		top: 0;
+		margin-bottom: 60px;
+		height: 400px;
+	}
+}
